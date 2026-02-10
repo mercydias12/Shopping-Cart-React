@@ -1,16 +1,48 @@
-# React + Vite
+Project Documentation
+1. Project Setup Steps
+Follow these steps to set up and run the project locally:
+npm create vite@latest project-name -- --template react
+cd project-name
+npm install
+npm run dev
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Install required dependencies:
+npm install react-router-dom
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. Public API Used
+DummyJSON Products API
+https://dummyjson.com/products
+This API is used to fetch product data such as product name, price, images, and description.
 
-## React Compiler
+3. Implemented Features
+Product Listing
+Grid layout for displaying products
+Responsive UI for better user experience
+Cart Functionality
+Add products to cart
+Remove products from cart
+Increase product quantity
+Decrease product quantity
+Prevent negative quantity values
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Price Calculation
+Automatic calculation of total cart price
+Updates total price on quantity change
+Pagination
+Configurable number of products per page
+Previous and Next page navigation
 
-## Expanding the ESLint configuration
+4. React Hooks Used
+useState
+Manage component-level state such as cart items, quantities, and pagination state
+useEffect
+Fetch product data from the API
+Handle side effects such as updating UI on state changes
+useMemo
+Optimize performance by memoizing total price calculations
+Prevent unnecessary recalculations on re-renders
+useReducer
+Manage complex cart logic (add, remove, increase, decrease actions)
+Maintain predictable and centralized state updates.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
